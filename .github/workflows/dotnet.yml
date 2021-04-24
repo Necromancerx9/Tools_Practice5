@@ -25,26 +25,9 @@ jobs:
       run: dotnet test --no-build --verbosity normal ./Tools_Practice5.sln
     - name: Publish
       run: dotnet publish ./Tools_Practice5.sln
-    - name: Zip Release
-    # You may pin to the exact commit or the version..
-    # uses: TheDoctor0/zip-release@a1afcab9c664c9976ac398fa831eac67bed1eb0e.
-      uses: TheDoctor0/zip-release@0.4.1
+    - uses: actions/upload-artifact@v2
       with:
-        # Filename for archive
-        filename: release.zip
-        # Base path for archive files
-        path: .
-        # Working directory before zipping
-        directory: Tools_Practice5/bin/Debug/net5.0/publish/
-        # List of excluded files / directories
-        exclusions: default
-        # Tool to use for archiving
-        type: zip
-    - name: Upload Release
-      uses: ncipollo/release-action@v1
-      with:
-          artifacts: "./release.zip"
-          token: ${{ secrets.GITHUB_TOKEN }}
-          tag: "v0.9"
+        name: release.zip
+        path: home/runner/work/Tools_Practice5/Tools_Practice5/Tools_Practice5/bin/Debug/net5.0/publish/
     
 
