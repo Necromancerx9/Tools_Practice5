@@ -25,4 +25,19 @@ jobs:
       run: dotnet test --no-build --verbosity normal ./Tools_Practice5.sln
     - name: Publish
       run: dotnet publish ./Tools_Practice5.sln
+    - name: Zip Release
+    # You may pin to the exact commit or the version.
+    # uses: TheDoctor0/zip-release@a1afcab9c664c9976ac398fa831eac67bed1eb0e
+      uses: TheDoctor0/zip-release@0.4.1
+      with:
+        # Filename for archive
+        filename: release.zip
+        # Base path for archive files
+        path: ./Tools_Practice5.sln
+        # Working directory before zipping
+        directory: ./Tools_Practice5.sln
+        # List of excluded files / directories
+        exclusions: default
+        # Tool to use for archiving
+        type: default
 
