@@ -36,5 +36,9 @@ jobs:
         dest: release.zip
         # Whether to add subdirectories to simply zip all files to the root
         recursive: default
+    - uses: actions/upload-artifact@v1
+      with:
+        name: my-artifact
+        path: ${{ github.workspace }}/release.zip
     
 
