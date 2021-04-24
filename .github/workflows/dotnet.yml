@@ -35,7 +35,7 @@ jobs:
         # Base path for archive files
         path: ~/Tools_Practice5
         # Working directory before zipping
-        directory: /home/runner/work/Tools_Practice5/Tools_Practice5/
+        directory: ./Tools_Practice5/
         # List of excluded files / directories
         exclusions: default
         # Tool to use for archiving
