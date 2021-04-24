@@ -25,11 +25,6 @@ jobs:
       run: dotnet test --no-build --verbosity normal ./Tools_Practice5.sln
     - name: Publish
       run: dotnet publish ./Tools_Practice5.sln
-    - name: Install zip
-      uses: montudor/action-zip@v1
-    - name: Zip output
-      run: zip -qq -r exe2.zip dist node_modules package.json
-      working-directory: /home/runner/work/Tools_Practice5/Tools_Practice5/Tools_Practice5/bin/Debug/net5.0/publish/
     - name: Zip Release
     # You may pin to the exact commit or the version.
     # uses: TheDoctor0/zip-release@a1afcab9c664c9976ac398fa831eac67bed1eb0e
@@ -38,9 +33,9 @@ jobs:
         # Filename for archive
         filename: release.zip
         # Base path for archive files
-        path: ~/Tools_Practice5.sln
+        path: ~/Tools_Practice5
         # Working directory before zipping
-        directory: exercise2.zip
+        directory: /home/runner/work/Tools_Practice5/Tools_Practice5/
         # List of excluded files / directories
         exclusions: default
         # Tool to use for archiving
