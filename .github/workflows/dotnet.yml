@@ -33,9 +33,9 @@ jobs:
         # Filename for archive
         filename: release.zip
         # Base path for archive files
-        path: ./Tools_Practice5/
+        path: ./
         # Working directory before zipping
-        directory: ./Tools_Practice5/
+        directory: ./
         # List of excluded files / directories
         exclusions: default
         # Tool to use for archiving
