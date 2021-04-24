@@ -45,6 +45,6 @@ jobs:
       with:
           artifacts: "./release.zip"
           token: ${{ secrets.GITHUB_TOKEN }}
-          tag: ${{ env.NOW }}
+          tag: "v0.9"
     
 
