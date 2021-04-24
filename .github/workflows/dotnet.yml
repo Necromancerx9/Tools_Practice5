@@ -35,7 +35,7 @@ jobs:
         # Base path for archive files
         path: ./
         # Working directory before zipping
-        directory: /home/runner/work/Tools_Practice5/Tools_Practice5/Tools_Practice5/bin/Debug/net5.0/publish/
+        directory: ./home/runner/work/Tools_Practice5/Tools_Practice5/Tools_Practice5/bin/Debug/net5.0/publish/
         # List of excluded files / directories
         exclusions: default
         # Tool to use for archiving
