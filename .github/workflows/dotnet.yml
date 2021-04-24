@@ -35,9 +35,9 @@ jobs:
         # Base path for archive files
         path: ~/Tools_Practice5.sln
         # Working directory before zipping
-        directory: ~/Tools_Practice5.sln
+        directory: ./Tools_Practice5.sln
         # List of excluded files / directories
         exclusions: default
         # Tool to use for archiving
-        type: default
+        type: zip
 
