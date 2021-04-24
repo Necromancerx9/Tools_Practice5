@@ -18,9 +18,8 @@ jobs:
       with:
         dotnet-version: 5.0.x
     - name: Restore dependencies
-      run: dotnet restore
-      working-directory: Necromancerx9/Tools_Practice5/Tools_Practice5.sln
+      run: dotnet restore ./Tools_Practice5.sln
     - name: Build
       run: dotnet build --no-restore
     - name: Test
-      run: dotnet test --no-build --verbosity normal
+      run: dotnet test --no-build --verbosity normal ./Tools_Practice5.sln
